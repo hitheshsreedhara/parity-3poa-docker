@@ -53,18 +53,38 @@ localhost:3001
 ```
 make balance-user
 ```
+```
+curl --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x004ec07d2329997267ec62b4166639513386f32e", "latest"],"id":1}' -H "Content-Type: application/json" -X POST localhost:8545
+{"jsonrpc":"2.0","result":"0x21d2013f118ed380000","id":1}
+```
 2. Check the authority account balance Example - node0:
 ```
 make balance-node0
+```
+```
+curl --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x00bd138abd70e2f00903268f3db08f2d25677c9e", "latest"],"id":1}' -H "Content-Type: application/json" -X POST localhost:8545
+{"jsonrpc":"2.0","result":"0xb469471f80140000","id":1}
 ```
 3. Trigger a transaction from user to node0 :
 ```
 make transaction-node0
 ```
+```
+curl --data '{"jsonrpc":"2.0","method":"personal_sendTransaction","params":[{"from":"0x004ec07d2329997267ec62b4166639513386f32e","to":"0x00bd138abd70e2f00903268f3db08f2d25677c9e","value":"0xde0b6b3a7640000"}, "user"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8545
+{"jsonrpc":"2.0","result":"0xb8ade46a336f5a732ba519eae044cc2b97dd2168eb8657266bd590ee748890fe","id":0}
+```
 4. Check the balance of user and node0 again to see the changes
 ```
 make balance-node0
 make balance-user
+```
+```
+curl --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x00bd138abd70e2f00903268f3db08f2d25677c9e", "latest"],"id":1}' -H "Content-Type: application/json" -X POST localhost:8545
+{"jsonrpc":"2.0","result":"0xc249fdd327780000","id":1}
+
+curl --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x004ec07d2329997267ec62b4166639513386f32e", "latest"],"id":1}' -H "Content-Type: application/json" -X POST localhost:8545
+{"jsonrpc":"2.0","result":"0x21d12333a6545d40000","id":1}
+
 ```
 
 ### My Learnings:
