@@ -1,2 +1,2 @@
-# parity-3poa-docker
-This repository is for setting up 3 nodes PoA Parity network using docker-compose
+# parity-poa-tutorial
+A complete set of files produced in the Parity PoA chain tutorial.
