@@ -70,8 +70,8 @@ make balance-user
 ### My Learnings:
 
 1. As a first step I started understanding bit more about the blockchain technology, ethereum and parity, PoA.
-2. I started to build Parity from source - https://github.com/paritytech/parity After a long building time parity was finally installed in my local machine.
-3. Luckily, I found a very good documentation about a demo PoA - https://wiki.parity.io/Demo-PoA-tutorial.html
+2. I started to build Parity from source - https://github.com/paritytech/parity. After a long building time parity was finally installed in my local machine.
+3. I found a very good documentation about a demo PoA - https://wiki.parity.io/Demo-PoA-tutorial.html
 4. I followed the steps in the above document and built my first PoA with two Authorities and a User and also made a successful transaction.
 5. Next step was to dockerize the setup with 3 nodes.
 6. I used parity binary instead of source code to build parity image because it takes longtime to build image using source code. 
