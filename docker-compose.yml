@@ -40,9 +40,9 @@ services:
 
   node2:
     build: .
-    image: parity/3poa:stable
+    image: parity/3poa:v1.10.6-stable
     command:
-      --config /parity/config/v1.10.6-node.toml
+      --config /parity/config/node.toml
       --engine-signer 0x002e28950558fbede1a9675cb113f0bd20912019
       --dapps-interface 0.0.0.0
       --ws-interface 0.0.0.0
