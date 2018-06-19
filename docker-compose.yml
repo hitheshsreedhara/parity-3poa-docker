@@ -5,7 +5,7 @@ services:
     image: parity/3poa:stable
     command:
       --config /parity/config/node.toml
-      --engine-signer 0x00bd138abd70e2f00903268f3db08f2d25677c9e   # Added enginer-signer as container argument to avoid 3 different node configuration files
+      --engine-signer 0x00bd138abd70e2f00903268f3db08f2d25677c9e
       --dapps-interface 0.0.0.0
       --ws-interface 0.0.0.0
       --ui-interface 0.0.0.0
