@@ -79,7 +79,7 @@ make balance-user
 8. I added a simple Makefile to execute the commands easily and make transactions.
 
 
-###### PS - I faced some scenarios while building the setup and I would like to understand how it works :
+### PS - I faced some scenarios while building the setup and I would like to understand how it works :
 1. When I git clone the source of parity - https://github.com/paritytech/parity  and build the executable using "cargo build --release" and start the parity. This starts me the unstable-parity version always. Even though I checkout the stable branch.
 
 2. ethstats dashboard sometimes makes the node offline and also the "Last transaction miners" dashboard section is not updated instantly. Not sure why.
