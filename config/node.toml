@@ -6,6 +6,8 @@ port = 8545
 apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces", "rpc", "parity_accounts"]
 [network]
 port = 30300
+
+# Adding bootnodes as part of node configuration to connect the nodes with each other
 bootnodes = [
   "enode://c08033382e6d014c8b169f50f61c008c85d35783d191a060c24b55e99961c08e3341339a26f33ed755c773ca70ed5d2fadd382b89de60df833522b25e722c8df@172.16.0.10:30300",
   "enode://1532712e0eb3802e8c62e29641ff1952de63538ad1ea4e3de10327f17a7c13ef3059f8a395c88982a85b5356e6275185c8f464507d5cd79948265f362bd3fc6e@172.16.0.11:30300",
