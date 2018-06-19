@@ -31,33 +31,37 @@ This was quite challenging task for me since, I have not had much experience in 
 ``` 
 
 ### Steps to Build the 3PoA parity setup :
+1. Checkout this source repository
 ```
-1. git clone repo
+git clone repo
 ```
+2. Build the docker-compose using Makefile
 ```
-2. make build
+make build
 ```
+3. Docker-compose up with the help of Makefile
 ```
-3. make up / make-up-daemon
+make up / make-up-daemon
 ```
+4. View the node status and blocks created with the help of dashboard running in port 3001
 ```
-4. localhost:3001 - for dashboard ui
+localhost:3001
 ```
 
 ### Make Transactions:
-A user is already created with rich account. Check the balance of user account :
+1. A user is already created with rich account. Check the balance of user account :
 ```
 make balance-user
 ```
-Check the authority account balance Example - node0:
+2. Check the authority account balance Example - node0:
 ```
 make balance-node0
 ```
-Trigger a transaction from user to node0 :
+3. Trigger a transaction from user to node0 :
 ```
 make transaction-node0
 ```
-Check the balance of user and node0 again to see the changes
+4. Check the balance of user and node0 again to see the changes
 ```
 make balance-node0
 make balance-user
@@ -72,6 +76,8 @@ make balance-user
 5. Next step was to dockerize the setup with 3 nodes.
 6. I used parity binary instead of source code to build parity image because it takes longtime to build image using source code. 
 7. Ofcourse I faced some problems like - “consensus signer not found” and with the help of few blogs and gitter channel of parity, I was able to troubleshoot it. Finally, built my PoA network on the containers and added monitoring to the nodes with the help of ethstats image.
+8. I added a simple Makefile to execute the commands easily and make transactions.
+
 
 PS - I faced some scenarios while building the setup and I would like to understand how it works :
 1. When I git clone the source of parity - https://github.com/paritytech/parity  and build the executable using "cargo build --release" and start the parity. This starts me the unstable-parity version always. Even though I checkout the stable branch.
