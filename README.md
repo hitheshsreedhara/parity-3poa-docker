@@ -97,6 +97,7 @@ curl --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x004ec07d232
 6. I used parity binary instead of source code to build parity image because it takes longtime to build image using source code. 
 7. Ofcourse I faced some problems like - “consensus signer not found” and with the help of few blogs and gitter channel of parity, I was able to troubleshoot it. Finally, built my PoA network on the containers and added monitoring to the nodes with the help of ethstats image.
 8. I added a simple Makefile to execute the commands easily and make transactions.
+9. Instead of using base_path, we can also mount the network key and signer keys to the contnainer alonne, but I wanted to have some prior transactions shown so I have kept the same base_path mounted from the conntainer.
 
 
 ### PS - I faced some scenarios while building the setup and I would like to understand how it works :
